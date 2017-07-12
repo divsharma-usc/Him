@@ -1,0 +1,63 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: left;
+}
+</style>
+<h2 style="text-align:center">Ticket Reservation</h2 >
+<h3 style="text-align:center">Himachal Pradesh Tourism Department</h3>
+<article class="basic">
+<p>Adventure Sport Center : {{basic.location}}</p>
+<p>Sport                  : {{basic.type}}</p>
+<p>Date                   : {{basic.date}}</p>
+</article>
+<hr>
+<table style="width:100%">
+ <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>DOB</th>
+    <th>Slot</th>
+  </tr>
+<div>
+{{# each table}}
+<article class="table">
+<tr>
+    <td>{{this.firstname}}</td>
+    <td>{{this.lastname}}</td>
+    <td>{{this.dob}}</td>
+    <td>{{this.slot}}</d>
+</tr>
+</article>
+{{/each}}
+<div>
+</table>
+
+
+
+<hr>
+<article class="basic">
+<p>Total amount to be paid at the center is: INR{{basic.amount}}</p>
+</article>
+<hr>
+<p>1. This ticket will be valid only with a valid ID card(Adhar card,Driving  Licence,Voter card,Passport etc.).<br>
+2. For details of rules and terms & conditions of eticket please visit www.himadvent.gov.in<br>
+3. Go through the terms & conditions and the safety guidelines given in 
+www.himadvent.gov.in<br>
+4 .Contact us on Customer Support at 9412-7778, 1232-34213 or Mail to www.himadvent@himtourism.gov.in
+
+<hr>
+
+<button style="margin-left:auto;margin-right:auto;display:block;postion:absolute" onclick="myFunction()">Print</button>
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>

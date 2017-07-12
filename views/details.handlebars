@@ -1,0 +1,44 @@
+<script src="/js/details.js"></script>
+<h2 class="page-header">Fill in the details.......</h2>
+{{#if errors}}
+       {{#each errors}}
+          <div class="alert alert-danger">{{msg}}</div>
+          {{/each}}
+{{/if}}
+<form method="post" action="/users/details">
+  <div class="form-group">
+  <label>First Name</label>
+  <input type="text" class="form-control"  placeholder="First Name" name="firstname">
+  </div>
+  <div class="form-group">
+  <label>Last Name</label>
+  <input type="text" class="form-control" placeholder="Last Name" name="lastname">
+  </div>
+  <div lass="form-group">
+     <label>DOB</label>
+     <input type="date" class="form-control" name="dob">
+     </div>
+     <br>
+  <div class="form-group">
+       <label>Time Slot</label><br>
+       <select id="slot" name="slot"></select>
+       <article class="decision">
+       <script language="javascript">
+       populatetype("slot",{{this.decision}});
+       </script> 
+       </article>
+ </div>
+      <button type="submit"> Next </button>
+  <br><br>
+  <hr>
+  <h4>Details of time slots is as under:-</h4>
+  <p>Slot 1: 9:00hrs-10:00hrs<br>
+     Slot 2: 10:00hrs-11:00hrs<br>
+     Slot 3: 11:00hrs-12:00hrs<br>
+     Slot 4: 12:00hrs-13:00hrs<br>
+     Slot 5: 13:00hrs-14:00hrs<br>
+     Slot 6: 14:00hrs-15:00hrs<br>
+     Slot 7: 15:00hrs-16:00hrs<br>
+  </p>
+  <hr>
+</form>

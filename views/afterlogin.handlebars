@@ -1,0 +1,26 @@
+<script src="/js/myscript.js"></script>
+<h2 class="page-header">Book Your Tickets</h2>
+
+<form method="post" action="/users/afterlogin">
+<br/><label>So what is on your mind.....?</label>
+<select id="type" name="type"></select>
+<br>
+<br/><label>Location:</label>
+<select id="location" name="location"></select>
+<br/>
+<br/>
+<script language="javascript">
+ populatetype("type", "location");
+            
+</script>
+<label>Number of persons</label>
+<input type="number" name="number"  min ="1" max="50">
+<br>
+<br>
+<label>Date</label>
+<input type="date" name="date">
+<br>
+<br>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+    
